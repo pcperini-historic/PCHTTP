@@ -14,8 +14,8 @@
 {
     NSArray *dictionaryArray = [[dictionary allKeys] arrayByComprehendingWithBlock: ^id (id element)
     {
-        NSString *key = [element stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-        NSString *value = [[dictionary objectForKey: element] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+        NSString *key = [[NSString stringWithFormat: @"%@", element] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+        NSString *value = [[NSString stringWithFormat: @"%@", [dictionary objectForKey: element]] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
         return [NSString stringWithFormat: @"%@=%@", key, value];
     }];
     
