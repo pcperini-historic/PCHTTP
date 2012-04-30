@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PCHTTP: A Simple Cocoa HTTP Client#
 
 The mobile world (and more) is run on REST. Why is it such a pain in the ass?
@@ -15,3 +16,9 @@ On the plus side, there's no need to muck about with .a or .framework files or l
 ## Oh, and... ##
 
 PCHTTP is ARCed. It also teneously relies on part of my PCSnippets project, `PCContainerComprehension` (also included in this project). If you _really_ don't want to use those categories, just change `+keyValueEvaluateDictionary:` in `PCHTTPSerializer`.
+=======
+PCHTTP
+======
+
+PCHTTP - A Simple Cocoa HTTP Client
+>>>>>>> a50e2c51a5ef9b43386aceb1d9f1c6869439e089

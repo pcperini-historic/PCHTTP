@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 *.swp
 
@@ -10,3 +11,12 @@ build/
 *.mode2v3
 
 xcuserdata
+=======
+# For projects using nanoc (http://nanoc.stoneship.org/)
+
+# Default location for output, needs to match output_dir's value found in config.yaml
+output/
+
+# Temporary file directory
+tmp/
+>>>>>>> a50e2c51a5ef9b43386aceb1d9f1c6869439e089
