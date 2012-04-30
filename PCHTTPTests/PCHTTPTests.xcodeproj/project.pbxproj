@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73B6A60D154F0A2100C1DF00 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B6A60C154F0A2100C1DF00 /* Cocoa.framework */; };
+		73B6A617154F0A2100C1DF00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A615154F0A2100C1DF00 /* InfoPlist.strings */; };
+		73B6A619154F0A2100C1DF00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A618154F0A2100C1DF00 /* main.m */; };
+		73B6A61D154F0A2100C1DF00 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A61B154F0A2100C1DF00 /* Credits.rtf */; };
+		73B6A620154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A61F154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.m */; };
+		73B6A623154F0A2200C1DF00 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A621154F0A2200C1DF00 /* MainMenu.xib */; };
+		73B6A653154F0A4F00C1DF00 /* PCHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A649154F0A4F00C1DF00 /* PCHTTPClient.m */; };
+		73B6A654154F0A4F00C1DF00 /* PCHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A64B154F0A4F00C1DF00 /* PCHTTPResponse.m */; };
+		73B6A655154F0A4F00C1DF00 /* PCHTTPSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A64D154F0A4F00C1DF00 /* PCHTTPSerializer.m */; };
+		73B6A65B154F0A6300C1DF00 /* app.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A657154F0A6300C1DF00 /* app.yaml */; };
+		73B6A65C154F0A6300C1DF00 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A658154F0A6300C1DF00 /* favicon.ico */; };
+		73B6A65D154F0A6300C1DF00 /* index.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A659154F0A6300C1DF00 /* index.yaml */; };
+		73B6A65E154F0A6300C1DF00 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A65A154F0A6300C1DF00 /* main.py */; };
+		73B6A661154F0AE600C1DF00 /* PCContainerComprehension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A660154F0AA800C1DF00 /* PCContainerComprehension.m */; };
+		73B6A669154F160400C1DF00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A668154F160400C1DF00 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		73B6A608154F0A2100C1DF00 /* PCHTTPTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCHTTPTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73B6A60C154F0A2100C1DF00 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		73B6A60F154F0A2100C1DF00 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		73B6A610154F0A2100C1DF00 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		73B6A611154F0A2100C1DF00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		73B6A614154F0A2100C1DF00 /* PCHTTPTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PCHTTPTests-Info.plist"; sourceTree = "<group>"; };
+		73B6A616154F0A2100C1DF00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73B6A618154F0A2100C1DF00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		73B6A61A154F0A2100C1DF00 /* PCHTTPTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PCHTTPTests-Prefix.pch"; sourceTree = "<group>"; };
+		73B6A61C154F0A2100C1DF00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		73B6A61E154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCHTTPTestsAppDelegate.h; sourceTree = "<group>"; };
+		73B6A61F154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCHTTPTestsAppDelegate.m; sourceTree = "<group>"; };
+		73B6A622154F0A2200C1DF00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		73B6A645154F0A4F00C1DF00 /* PCHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHTTP.h; sourceTree = "<group>"; };
+		73B6A648154F0A4F00C1DF00 /* PCHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHTTPClient.h; sourceTree = "<group>"; };
+		73B6A649154F0A4F00C1DF00 /* PCHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHTTPClient.m; sourceTree = "<group>"; };
+		73B6A64A154F0A4F00C1DF00 /* PCHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHTTPResponse.h; sourceTree = "<group>"; };
+		73B6A64B154F0A4F00C1DF00 /* PCHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHTTPResponse.m; sourceTree = "<group>"; };
+		73B6A64C154F0A4F00C1DF00 /* PCHTTPSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHTTPSerializer.h; sourceTree = "<group>"; };
+		73B6A64D154F0A4F00C1DF00 /* PCHTTPSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHTTPSerializer.m; sourceTree = "<group>"; };
+		73B6A657154F0A6300C1DF00 /* app.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.yaml; sourceTree = "<group>"; };
+		73B6A658154F0A6300C1DF00 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		73B6A659154F0A6300C1DF00 /* index.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.yaml; sourceTree = "<group>"; };
+		73B6A65A154F0A6300C1DF00 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		73B6A65F154F0AA800C1DF00 /* PCContainerComprehension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCContainerComprehension.h; sourceTree = "<group>"; };
+		73B6A660154F0AA800C1DF00 /* PCContainerComprehension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCContainerComprehension.m; sourceTree = "<group>"; };
+		73B6A668154F160400C1DF00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73B6A605154F0A2100C1DF00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B6A60D154F0A2100C1DF00 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73B6A5FD154F0A2100C1DF00 = {
+			isa = PBXGroup;
+			children = (
+				73B6A668154F160400C1DF00 /* README.md */,
+				73B6A612154F0A2100C1DF00 /* PCHTTPTests */,
+				73B6A60B154F0A2100C1DF00 /* Frameworks */,
+				73B6A609154F0A2100C1DF00 /* Products */,
+				73B6A656154F0A6300C1DF00 /* pchttp-tests */,
+			);
+			sourceTree = "<group>";
+		};
+		73B6A609154F0A2100C1DF00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A608154F0A2100C1DF00 /* PCHTTPTests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73B6A60B154F0A2100C1DF00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A60C154F0A2100C1DF00 /* Cocoa.framework */,
+				73B6A60E154F0A2100C1DF00 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73B6A60E154F0A2100C1DF00 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A60F154F0A2100C1DF00 /* AppKit.framework */,
+				73B6A610154F0A2100C1DF00 /* CoreData.framework */,
+				73B6A611154F0A2100C1DF00 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		73B6A612154F0A2100C1DF00 /* PCHTTPTests */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A63F154F0A4F00C1DF00 /* PCHTTP */,
+				73B6A61E154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.h */,
+				73B6A61F154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.m */,
+				73B6A621154F0A2200C1DF00 /* MainMenu.xib */,
+				73B6A613154F0A2100C1DF00 /* Supporting Files */,
+			);
+			path = PCHTTPTests;
+			sourceTree = "<group>";
+		};
+		73B6A613154F0A2100C1DF00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A65F154F0AA800C1DF00 /* PCContainerComprehension.h */,
+				73B6A660154F0AA800C1DF00 /* PCContainerComprehension.m */,
+				73B6A614154F0A2100C1DF00 /* PCHTTPTests-Info.plist */,
+				73B6A615154F0A2100C1DF00 /* InfoPlist.strings */,
+				73B6A618154F0A2100C1DF00 /* main.m */,
+				73B6A61A154F0A2100C1DF00 /* PCHTTPTests-Prefix.pch */,
+				73B6A61B154F0A2100C1DF00 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73B6A63F154F0A4F00C1DF00 /* PCHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A645154F0A4F00C1DF00 /* PCHTTP.h */,
+				73B6A648154F0A4F00C1DF00 /* PCHTTPClient.h */,
+				73B6A649154F0A4F00C1DF00 /* PCHTTPClient.m */,
+				73B6A64A154F0A4F00C1DF00 /* PCHTTPResponse.h */,
+				73B6A64B154F0A4F00C1DF00 /* PCHTTPResponse.m */,
+				73B6A64C154F0A4F00C1DF00 /* PCHTTPSerializer.h */,
+				73B6A64D154F0A4F00C1DF00 /* PCHTTPSerializer.m */,
+			);
+			name = PCHTTP;
+			path = ../../PCHTTP;
+			sourceTree = "<group>";
+		};
+		73B6A656154F0A6300C1DF00 /* pchttp-tests */ = {
+			isa = PBXGroup;
+			children = (
+				73B6A657154F0A6300C1DF00 /* app.yaml */,
+				73B6A658154F0A6300C1DF00 /* favicon.ico */,
+				73B6A659154F0A6300C1DF00 /* index.yaml */,
+				73B6A65A154F0A6300C1DF00 /* main.py */,
+			);
+			path = "pchttp-tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73B6A607154F0A2100C1DF00 /* PCHTTPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73B6A626154F0A2200C1DF00 /* Build configuration list for PBXNativeTarget "PCHTTPTests" */;
+			buildPhases = (
+				73B6A604154F0A2100C1DF00 /* Sources */,
+				73B6A605154F0A2100C1DF00 /* Frameworks */,
+				73B6A606154F0A2100C1DF00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PCHTTPTests;
+			productName = PCHTTPTests;
+			productReference = 73B6A608154F0A2100C1DF00 /* PCHTTPTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73B6A5FF154F0A2100C1DF00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PCHTTPTests;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 73B6A602154F0A2100C1DF00 /* Build configuration list for PBXProject "PCHTTPTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 73B6A5FD154F0A2100C1DF00;
+			productRefGroup = 73B6A609154F0A2100C1DF00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73B6A607154F0A2100C1DF00 /* PCHTTPTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73B6A606154F0A2100C1DF00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B6A617154F0A2100C1DF00 /* InfoPlist.strings in Resources */,
+				73B6A61D154F0A2100C1DF00 /* Credits.rtf in Resources */,
+				73B6A623154F0A2200C1DF00 /* MainMenu.xib in Resources */,
+				73B6A65B154F0A6300C1DF00 /* app.yaml in Resources */,
+				73B6A65C154F0A6300C1DF00 /* favicon.ico in Resources */,
+				73B6A65D154F0A6300C1DF00 /* index.yaml in Resources */,
+				73B6A65E154F0A6300C1DF00 /* main.py in Resources */,
+				73B6A669154F160400C1DF00 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73B6A604154F0A2100C1DF00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B6A661154F0AE600C1DF00 /* PCContainerComprehension.m in Sources */,
+				73B6A619154F0A2100C1DF00 /* main.m in Sources */,
+				73B6A620154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.m in Sources */,
+				73B6A653154F0A4F00C1DF00 /* PCHTTPClient.m in Sources */,
+				73B6A654154F0A4F00C1DF00 /* PCHTTPResponse.m in Sources */,
+				73B6A655154F0A4F00C1DF00 /* PCHTTPSerializer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		73B6A615154F0A2100C1DF00 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73B6A616154F0A2100C1DF00 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		73B6A61B154F0A2100C1DF00 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73B6A61C154F0A2100C1DF00 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		73B6A621154F0A2200C1DF00 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73B6A622154F0A2200C1DF00 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73B6A624154F0A2200C1DF00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		73B6A625154F0A2200C1DF00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		73B6A627154F0A2200C1DF00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PCHTTPTests/PCHTTPTests-Prefix.pch";
+				INFOPLIST_FILE = "PCHTTPTests/PCHTTPTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		73B6A628154F0A2200C1DF00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PCHTTPTests/PCHTTPTests-Prefix.pch";
+				INFOPLIST_FILE = "PCHTTPTests/PCHTTPTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73B6A602154F0A2100C1DF00 /* Build configuration list for PBXProject "PCHTTPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73B6A624154F0A2200C1DF00 /* Debug */,
+				73B6A625154F0A2200C1DF00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73B6A626154F0A2200C1DF00 /* Build configuration list for PBXNativeTarget "PCHTTPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73B6A627154F0A2200C1DF00 /* Debug */,
+				73B6A628154F0A2200C1DF00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73B6A5FF154F0A2100C1DF00 /* Project object */;
+}
