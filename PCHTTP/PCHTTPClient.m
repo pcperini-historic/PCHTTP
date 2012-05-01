@@ -23,17 +23,17 @@
     dispatch_queue_t current_queue = dispatch_get_current_queue();
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^()
-    {
-        PCHTTPResponse *response = [PCHTTPClient synchronouslyRequestURL: url
-                                                                  method: method
-                                                              parameters: parameters
-                                                                 payload: payload];
-        
-        dispatch_async(current_queue, ^()
-        {
-            responseBlock(response);
-        });
-    });
+                   {
+                       PCHTTPResponse *response = [PCHTTPClient synchronouslyRequestURL: url
+                                                                                 method: method
+                                                                             parameters: parameters
+                                                                                payload: payload];
+                       
+                       dispatch_async(current_queue, ^()
+                                      {
+                                          responseBlock(response);
+                                      });
+                   });
 }
 
 + (PCHTTPResponse *)synchronouslyRequestURL:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters payload:(id)payload
@@ -42,15 +42,12 @@
     NSString *urlString = [url copy];
     NSData *requestBody = nil;
     
-    if ([method isEqualToString: @"GET"] || [method isEqualToString: @"DELETE"])
+    if (parameters)
     {
-        if (parameters)
-        {
-            NSString *parameterString = [PCHTTPSerializer keyValueEvaluateDictionary: parameters];
-            urlString = [urlString stringByAppendingFormat: @"?%@", parameterString];
-        }
+        NSString *parameterString = [PCHTTPSerializer keyValueEvaluateDictionary: parameters];
+        urlString = [urlString stringByAppendingFormat: @"?%@", parameterString];
     }
-    else if ([method isEqualToString: @"POST"] || [method isEqualToString: @"PUT"])
+    if (payload)
     {        
         if ([payload isKindOfClass: [NSData class]])
         {
@@ -90,10 +87,36 @@
 }
 
 #pragma mark - Synchronous Methods
+#pragma mark - - GET
++ (PCHTTPResponse *)get:(NSString *)url
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"GET"
+                                      parameters: nil
+                                         payload: nil];
+}
+
 + (PCHTTPResponse *)get:(NSString *)url parameters:(NSDictionary *)parameters
 {
     return [PCHTTPClient synchronouslyRequestURL: url
                                           method: @"GET"
+                                      parameters: parameters
+                                         payload: nil];
+}
+
+#pragma mark - - POST
++ (PCHTTPResponse *)post:(NSString *)url
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"POST"
+                                      parameters: nil
+                                         payload: nil];
+}
+
++ (PCHTTPResponse *)post:(NSString *)url parameters:(NSDictionary *)parameters
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"POST"
                                       parameters: parameters
                                          payload: nil];
 }
@@ -106,12 +129,54 @@
                                          payload: payload];
 }
 
++ (PCHTTPResponse *)post:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"POST"
+                                      parameters: parameters
+                                         payload: payload];
+}
+
+#pragma mark - - PUT
++ (PCHTTPResponse *)put:(NSString *)url
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"PUT"
+                                      parameters: nil
+                                         payload: nil];
+}
+
++ (PCHTTPResponse *)put:(NSString *)url parameters:(NSDictionary *)parameters
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"PUT"
+                                      parameters: parameters
+                                         payload: nil];
+}
+
 + (PCHTTPResponse *)put:(NSString *)url payload:(id)payload
 {
     return [PCHTTPClient synchronouslyRequestURL: url
                                           method: @"PUT"
                                       parameters: nil
                                          payload: payload];
+}
+
++ (PCHTTPResponse *)put:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"PUT"
+                                      parameters: parameters
+                                         payload: payload];
+}
+
+#pragma mark - - DELETE
++ (PCHTTPResponse *)delete:(NSString *)url
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"DELETE"
+                                      parameters: nil
+                                         payload: nil];
 }
 
 + (PCHTTPResponse *)delete:(NSString *)url parameters:(NSDictionary *)parameters
@@ -123,10 +188,39 @@
 }
 
 #pragma mark - Asynchronous Methods
+#pragma mark - - GET
++ (void)get:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"GET"
+                                parameters: nil
+                                   payload: nil
+                                 withBlock: responseBlock];
+}
+
 + (void)get:(NSString *)url parameters:(NSDictionary *)parameters withBlock:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"GET"
+                                parameters: parameters
+                                   payload: nil
+                                 withBlock: responseBlock];
+}
+
+#pragma mark - - POST
++ (void)post:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"POST"
+                                parameters: nil
+                                   payload: nil
+                                 withBlock: responseBlock];
+}
+
++ (void)post:(NSString *)url parameters:(NSDictionary *)parameters withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"POST"
                                 parameters: parameters
                                    payload: nil
                                  withBlock: responseBlock];
@@ -141,12 +235,59 @@
                                  withBlock: responseBlock];
 }
 
++ (void)post:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"POST"
+                                parameters: parameters
+                                   payload: payload
+                                 withBlock: responseBlock];
+}
+
+#pragma mark - - PUT
++ (void)put:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"PUT"
+                                parameters: nil
+                                   payload: nil
+                                 withBlock: responseBlock];
+}
+
++ (void)put:(NSString *)url parameters:(NSDictionary *)parameters withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"PUT"
+                                parameters: parameters
+                                   payload: nil
+                                 withBlock: responseBlock];
+}
+
 + (void)put:(NSString *)url payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"PUT"
                                 parameters: nil
                                    payload: payload
+                                 withBlock: responseBlock];
+}
+
++ (void)put:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"PUT"
+                                parameters: parameters
+                                   payload: payload
+                                 withBlock: responseBlock];
+}
+
+#pragma mark - - DELETE
++ (void)delete:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"DELETE"
+                                parameters: nil
+                                   payload: nil
                                  withBlock: responseBlock];
 }
 
