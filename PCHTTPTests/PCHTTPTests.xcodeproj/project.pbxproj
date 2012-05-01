@@ -20,7 +20,6 @@
 		73B6A65C154F0A6300C1DF00 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A658154F0A6300C1DF00 /* favicon.ico */; };
 		73B6A65D154F0A6300C1DF00 /* index.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A659154F0A6300C1DF00 /* index.yaml */; };
 		73B6A65E154F0A6300C1DF00 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A65A154F0A6300C1DF00 /* main.py */; };
-		73B6A661154F0AE600C1DF00 /* PCContainerComprehension.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A660154F0AA800C1DF00 /* PCContainerComprehension.m */; };
 		73B6A669154F160400C1DF00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A668154F160400C1DF00 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +48,6 @@
 		73B6A658154F0A6300C1DF00 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		73B6A659154F0A6300C1DF00 /* index.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.yaml; sourceTree = "<group>"; };
 		73B6A65A154F0A6300C1DF00 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
-		73B6A65F154F0AA800C1DF00 /* PCContainerComprehension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCContainerComprehension.h; sourceTree = "<group>"; };
-		73B6A660154F0AA800C1DF00 /* PCContainerComprehension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCContainerComprehension.m; sourceTree = "<group>"; };
 		73B6A668154F160400C1DF00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +116,6 @@
 		73B6A613154F0A2100C1DF00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				73B6A65F154F0AA800C1DF00 /* PCContainerComprehension.h */,
-				73B6A660154F0AA800C1DF00 /* PCContainerComprehension.m */,
 				73B6A614154F0A2100C1DF00 /* PCHTTPTests-Info.plist */,
 				73B6A615154F0A2100C1DF00 /* InfoPlist.strings */,
 				73B6A618154F0A2100C1DF00 /* main.m */,
@@ -225,7 +220,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B6A661154F0AE600C1DF00 /* PCContainerComprehension.m in Sources */,
 				73B6A619154F0A2100C1DF00 /* main.m in Sources */,
 				73B6A620154F0A2100C1DF00 /* PCHTTPTestsAppDelegate.m in Sources */,
 				73B6A653154F0A4F00C1DF00 /* PCHTTPClient.m in Sources */,
@@ -352,6 +346,7 @@
 				73B6A628154F0A2200C1DF00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

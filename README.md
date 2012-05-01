@@ -18,7 +18,7 @@ On the plus side, there's no need to muck about with .a or .framework files or l
 
 ## Oh, and... ##
 
-PCHTTP is ARCed. It also teneously relies on part of my PCSnippets project, `PCContainerComprehension` (also included in this project). If you _really_ don't want to use those categories, just change `+keyValueEvaluateDictionary:` in `PCHTTPSerializer`.
+PCHTTP is ARCed. A Google App Engine (GAE) test application (written in Python) is included in the test project. It is effectivly an echo server that can be run on local machines running GAE, or anyone's personal GAE account.
 
 ## License ##
 
