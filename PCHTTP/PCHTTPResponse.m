@@ -2,7 +2,7 @@
 //  PCHTTPResponse.m
 //
 //  Created by Patrick Perini on 4/29/12.
-//  Copyright (c) 2012 Patrick Perini. All rights reserved.
+//  Licensing information available in README.md
 //
 
 #import "PCHTTPResponse.h"

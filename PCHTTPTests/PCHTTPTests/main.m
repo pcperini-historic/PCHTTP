@@ -3,7 +3,7 @@
 //  PCHTTPTests
 //
 //  Created by Patrick Perini on 4/30/12.
-//  Copyright (c) 2012 Patrick Perini. All rights reserved.
+//  Licensing information available in README.md
 //
 
 #import <Cocoa/Cocoa.h>

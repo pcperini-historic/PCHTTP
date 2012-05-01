@@ -19,3 +19,7 @@ On the plus side, there's no need to muck about with .a or .framework files or l
 ## Oh, and... ##
 
 PCHTTP is ARCed. It also teneously relies on part of my PCSnippets project, `PCContainerComprehension` (also included in this project). If you _really_ don't want to use those categories, just change `+keyValueEvaluateDictionary:` in `PCHTTPSerializer`.
+
+## License ##
+
+PCHTTP is under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/). I'd love to be featured in your About page, but I understand that some commercial applications prevent this. If you need non-attribution access, drop me an email. Non-attribution licenses are generally free to a good home, but I'd like to hear about the project!
