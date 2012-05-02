@@ -23,21 +23,25 @@
     dispatch_queue_t current_queue = dispatch_get_current_queue();
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^()
-                   {
-                       PCHTTPResponse *response = [PCHTTPClient synchronouslyRequestURL: url
-                                                                                 method: method
-                                                                             parameters: parameters
-                                                                                payload: payload];
-                       
-                       dispatch_async(current_queue, ^()
-                                      {
-                                          responseBlock(response);
-                                      });
-                   });
+    {
+        PCHTTPResponse *response = [PCHTTPClient synchronouslyRequestURL: url
+                                                                  method: method
+                                                              parameters: parameters
+                                                                 payload: payload];
+       
+        dispatch_async(current_queue, ^()
+        {
+            if (responseBlock)
+              responseBlock(response);
+        });
+    });
 }
 
 + (PCHTTPResponse *)synchronouslyRequestURL:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters payload:(id)payload
 {
+    if (!url)
+        return nil;
+    
     PCHTTPResponse *response = [[PCHTTPResponse alloc] init];
     NSString *urlString = [url copy];
     NSData *requestBody = nil;
