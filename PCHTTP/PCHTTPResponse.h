@@ -50,6 +50,16 @@ typedef enum
  */
 @property NSData *data;
 
+/*!
+ The response data in string form.
+ */
+@property (readonly) NSString *string;
+
+/*!
+ The response data in JSON object form.
+ */
+@property (readonly) id object;
+
 @end
 
 typedef void(^PCHTTPResponseBlock)(PCHTTPResponse *response);

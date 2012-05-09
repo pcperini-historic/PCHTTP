@@ -16,6 +16,19 @@
 @synthesize status;
 @synthesize data;
 
+- (NSString *)string
+{
+    return [[NSString alloc] initWithData: data
+                                 encoding: NSUTF8StringEncoding];
+}
+
+- (id)object
+{
+    return [NSJSONSerialization JSONObjectWithData: data
+                                           options: 0
+                                             error: nil];
+}
+
 #pragma mark - Metadata
 - (NSString *)description
 {
