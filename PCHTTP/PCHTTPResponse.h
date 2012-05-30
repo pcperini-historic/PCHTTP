@@ -14,9 +14,11 @@ typedef enum
 {
     PCHTTPSuccessfulResponse        = 200,
     PCHTTPBadRequestResponse        = 400,
+    PCHTTPUnauthorizedResponse      = 401,
     PCHTTPForbiddenResponse         = 403,
     PCHTTPNotFoundResponse          = 404,
     PCHTTPMethodNotAllowedResponse  = 405,
+    PCHTTPConflictResponse          = 409,
     PCHTTPServerError               = 500
 } PCHTTPResponseStatus;
 
