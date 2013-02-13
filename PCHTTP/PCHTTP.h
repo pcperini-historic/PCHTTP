@@ -6,5 +6,6 @@
 //
 
 #import "PCHTTPClient.h"
+#import "PCHTTPBatchClient.h"
 #import "PCHTTPResponse.h"
 #import "PCHTTPSerializer.h"

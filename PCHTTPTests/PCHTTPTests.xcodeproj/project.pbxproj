@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7385A67116CBE0A0006597A3 /* PCHTTPBatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7385A67016CBE0A0006597A3 /* PCHTTPBatchClient.m */; };
 		73B6A60D154F0A2100C1DF00 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B6A60C154F0A2100C1DF00 /* Cocoa.framework */; };
 		73B6A617154F0A2100C1DF00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A615154F0A2100C1DF00 /* InfoPlist.strings */; };
 		73B6A619154F0A2100C1DF00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A618154F0A2100C1DF00 /* main.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7385A66F16CBE0A0006597A3 /* PCHTTPBatchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHTTPBatchClient.h; sourceTree = "<group>"; };
+		7385A67016CBE0A0006597A3 /* PCHTTPBatchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHTTPBatchClient.m; sourceTree = "<group>"; };
 		73B6A608154F0A2100C1DF00 /* PCHTTPTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCHTTPTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B6A60C154F0A2100C1DF00 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		73B6A60F154F0A2100C1DF00 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,8 @@
 				73B6A64B154F0A4F00C1DF00 /* PCHTTPResponse.m */,
 				73B6A64C154F0A4F00C1DF00 /* PCHTTPSerializer.h */,
 				73B6A64D154F0A4F00C1DF00 /* PCHTTPSerializer.m */,
+				7385A66F16CBE0A0006597A3 /* PCHTTPBatchClient.h */,
+				7385A67016CBE0A0006597A3 /* PCHTTPBatchClient.m */,
 			);
 			name = PCHTTP;
 			path = ../../PCHTTP;
@@ -225,6 +230,7 @@
 				73B6A653154F0A4F00C1DF00 /* PCHTTPClient.m in Sources */,
 				73B6A654154F0A4F00C1DF00 /* PCHTTPResponse.m in Sources */,
 				73B6A655154F0A4F00C1DF00 /* PCHTTPSerializer.m in Sources */,
+				7385A67116CBE0A0006597A3 /* PCHTTPBatchClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

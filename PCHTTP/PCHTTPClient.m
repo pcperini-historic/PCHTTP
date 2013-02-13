@@ -10,15 +10,15 @@
 
 @interface PCHTTPClient ()
 
-+ (void)asynchronouslyRequestURL: (NSString *)url method: (NSString *)method parameters: (NSDictionary *)parameters payload: (id)payload withBlock: (PCHTTPResponseBlock)responseBlock;
-+ (PCHTTPResponse *)synchronouslyRequestURL: (NSString *)url method: (NSString *)method parameters: (NSDictionary *)parameters payload: (id)payload;
++ (void)asynchronouslyRequestURL:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
++ (PCHTTPResponse *)synchronouslyRequestURL:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters payload:(id)payload;
 
 @end
 
 @implementation PCHTTPClient
 
 #pragma mark - Internal Methods
-+ (void)asynchronouslyRequestURL:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)asynchronouslyRequestURL:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     dispatch_queue_t current_queue = dispatch_get_current_queue();
     
@@ -193,115 +193,115 @@
 
 #pragma mark - Asynchronous Methods
 #pragma mark - - GET
-+ (void)get:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)get:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"GET"
                                 parameters: nil
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)get:(NSString *)url parameters:(NSDictionary *)parameters withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)get:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"GET"
                                 parameters: parameters
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
 #pragma mark - - POST
-+ (void)post:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)post:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"POST"
                                 parameters: nil
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)post:(NSString *)url parameters:(NSDictionary *)parameters withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)post:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"POST"
                                 parameters: parameters
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)post:(NSString *)url payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)post:(NSString *)url payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"POST"
                                 parameters: nil
                                    payload: payload
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)post:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)post:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"POST"
                                 parameters: parameters
                                    payload: payload
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
 #pragma mark - - PUT
-+ (void)put:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)put:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"PUT"
                                 parameters: nil
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)put:(NSString *)url parameters:(NSDictionary *)parameters withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)put:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"PUT"
                                 parameters: parameters
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)put:(NSString *)url payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)put:(NSString *)url payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"PUT"
                                 parameters: nil
                                    payload: payload
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)put:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)put:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"PUT"
                                 parameters: parameters
                                    payload: payload
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
 #pragma mark - - DELETE
-+ (void)delete:(NSString *)url withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)delete:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"DELETE"
                                 parameters: nil
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
-+ (void)delete:(NSString *)url parameters:(NSDictionary *)parameters withBlock:(PCHTTPResponseBlock)responseBlock
++ (void)delete:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
                                     method: @"DELETE"
                                 parameters: parameters
                                    payload: nil
-                                 withBlock: responseBlock];
+                                 responseHandler: responseBlock];
 }
 
 @end

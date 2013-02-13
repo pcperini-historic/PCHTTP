@@ -32,7 +32,7 @@
 #pragma mark - Metadata
 - (NSString *)description
 {
-    return [NSString stringWithFormat: @"%@ - %d:\n\t%@", requestURL, status, data];
+    return [NSString stringWithFormat: @"%@ - %ld:\n\t%@", requestURL, status, data];
 }
 
 @end

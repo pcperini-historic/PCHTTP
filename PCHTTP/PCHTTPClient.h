@@ -9,9 +9,8 @@
 #import "PCHTTPResponse.h"
 
 /*!
- Allows users to make HTTP requests using a simple API.
- 
- Requests can return response data inline and synchronously, or provide a callback block for asynchronous returns.
+    Allows users to make HTTP requests using a simple API.
+    Requests can return response data inline and synchronously, or provide a callback block for asynchronous returns.
  */
 @interface PCHTTPClient : NSObject
 
@@ -23,104 +22,104 @@
 /// @name Performing GET Requests
 
 /*!
- Performs a synchronous GET request on the given URL.
- @param  url         The URL to request.
- @return The response for the request.
+    Performs a synchronous GET request on the given URL.
+    @param url The URL to request.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)get: (NSString *)url;
++ (PCHTTPResponse *)get:(NSString *)url;
 
 /*!
- Performs a synchronous GET request on the given URL.
- @param  url         The URL to request.
- @param  parameters  A dictionary of query string parameters.
- @return The response for the request.
+    Performs a synchronous GET request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)get: (NSString *)url parameters: (NSDictionary *)parameters;
++ (PCHTTPResponse *)get:(NSString *)url parameters:(NSDictionary *)parameters;
 
 /// @name Performing POST Requests
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url      The URL to request.
- @return The response for the request.
+    Performs a synchronous POST request on the given URL.
+    @param url The URL to request.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)post: (NSString *)url;
++ (PCHTTPResponse *)post:(NSString *)url;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url         The URL to request.
- @param  parameters  A dictionary of query string parameters.
- @return The response for the request.
+     Performs a synchronous POST request on the given URL.
+     @param url The URL to request.
+     @param parameters A dictionary of query string parameters.
+     @return The response for the request.
  */
-+ (PCHTTPResponse *)post: (NSString *)url parameters: (NSDictionary *)parameters;
++ (PCHTTPResponse *)post:(NSString *)url parameters:(NSDictionary *)parameters;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url      The URL to request.
- @param  payload  The object for the POST body.
- @return The response for the request.
+    Performs a synchronous POST request on the given URL.
+    @param url The URL to request.
+    @param payload The object for the POST body.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)post: (NSString *)url payload: (id)payload;
++ (PCHTTPResponse *)post:(NSString *)url payload:(id)payload;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url         The URL to request.
- @param  parameters  A dictionary of query string parameters.
- @param  payload     The object for the POST body.
- @return The response for the request.
+    Performs a synchronous POST request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @param payload The object for the POST body.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)post: (NSString *)url parameters: (NSDictionary *)parameters payload: (id)payload;
++ (PCHTTPResponse *)post:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload;
 
 /// @name Performing PUT Requests
 
 /*!
- Performs a synchronous PUT request on the given URL.
- @param  url      The URL to request.
- @return The response for the request.
+    Performs a synchronous PUT request on the given URL.
+    @param url The URL to request.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)put: (NSString *)url;
++ (PCHTTPResponse *)put:(NSString *)url;
 
 /*!
- Performs a synchronous PUT request on the given URL.
- @param  url         The URL to request.
- @param  parameters  A dictionary of query string parameters.
- @return The response for the request.
+    Performs a synchronous PUT request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)put: (NSString *)url parameters: (NSDictionary *)parameters;
++ (PCHTTPResponse *)put:(NSString *)url parameters:(NSDictionary *)parameters;
 
 /*!
- Performs a synchronous PUT request on the given URL.
- @param  url      The URL to request.
- @param  payload  The object for the PUT body.
- @return The response for the request.
+    Performs a synchronous PUT request on the given URL.
+    @param url The URL to request.
+    @param payload The object for the PUT body.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)put: (NSString *)url payload: (id)payload;
++ (PCHTTPResponse *)put:(NSString *)url payload:(id)payload;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url         The URL to request.
- @param  parameters  A dictionary of query string parameters.
- @param  payload     The object for the POST body.
- @return The response for the request.
+    Performs a synchronous POST request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @param payload The object for the POST body.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)put: (NSString *)url parameters: (NSDictionary *)parameters payload: (id)payload;
++ (PCHTTPResponse *)put:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload;
 
 /// @name Performing DELETE Requests
 
 /*!
- Performs a synchronous DELETE request on the given URL.
- @param  url         The URL to request.
- @return The response for the request.
+    Performs a synchronous DELETE request on the given URL.
+    @param url The URL to request.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)delete: (NSString *)url;
++ (PCHTTPResponse *)delete:(NSString *)url;
 
 /*!
- Performs a synchronous DELETE request on the given URL.
- @param  url         The URL to request.
- @param  parameters  A dictionary of query string parameters.
- @return The response for the request.
+    Performs a synchronous DELETE request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @return The response for the request.
  */
-+ (PCHTTPResponse *)delete: (NSString *)url parameters: (NSDictionary *)parameters;
++ (PCHTTPResponse *)delete:(NSString *)url parameters:(NSDictionary *)parameters;
 
 #pragma mark - Asynchronous Methods
 /// -------------------------------------
@@ -130,103 +129,103 @@
 /// @name Performing GET Requests
 
 /*!
- Performs a synchronous GET request on the given URL.
- @param  url           The URL to request.
- @param  responseBlock The response handler.
+    Performs an asynchronous GET request on the given URL.
+    @param url The URL to request.
+    @param responseBlock The response handler.
  */
-+ (void)get: (NSString *)url withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)get:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous GET request on the given URL.
- @param  url           The URL to request.
- @param  parameters    A dictionary of query string parameters.
- @param  responseBlock The response handler.
+    Performs an asynchronous GET request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @param responseBlock The response handler.
  */
-+ (void)get: (NSString *)url parameters: (NSDictionary *)parameters withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)get:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /// @name Performing POST Requests
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url           The URL to request.
- @param  responseBlock The response handler.
+    Performs an asynchronous POST request on the given URL.
+    @param url The URL to request.
+    @param responseBlock The response handler.
  */
-+ (void)post: (NSString *)url withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)post:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url           The URL to request.
- @param  parameters    A dictionary of query string parameters.
- @param  responseBlock The response handler.
+    Performs an asynchronous POST request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @param responseBlock The response handler.
  */
-+ (void)post: (NSString *)url parameters: (NSDictionary *)parameters withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)post:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url           The URL to request.
- @param  payload       The object for the POST body.
- @param  responseBlock The response handler.
+    Performs an asynchronous POST request on the given URL.
+    @param url The URL to request.
+    @param payload The object for the POST body.
+    @param responseBlock The response handler.
  */
-+ (void)post: (NSString *)url payload: (id)payload withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)post:(NSString *)url payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url           The URL to request.
- @param  parameters    A dictionary of query string parameters.
- @param  payload       The object for the POST body.
- @param  responseBlock The response handler.
+    Performs an asynchronous POST request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @param payload The object for the POST body.
+    @param responseBlock The response handler.
  */
-+ (void)post: (NSString *)url parameters: (NSDictionary *)parameters payload: (id)payload withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)post:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /// @name Performing PUT Requests
 
 /*!
- Performs a synchronous PUT request on the given URL.
- @param  url           The URL to request.
- @param  responseBlock The response handler.
+    Performs an asynchronous PUT request on the given URL.
+    @param url The URL to request.
+    @param responseBlock The response handler.
  */
-+ (void)put: (NSString *)url withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)put:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous PUT request on the given URL.
- @param  url           The URL to request.
- @param  parameters    A dictionary of query string parameters.
- @param  responseBlock The response handler.
+    Performs an asynchronous PUT request on the given URL.
+    @param urlThe URL to request.
+    @param parametersA dictionary of query string parameters.
+    @param responseBlock The response handler.
  */
-+ (void)put: (NSString *)url parameters: (NSDictionary *)parameters withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)put:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous PUT request on the given URL.
- @param  url           The URL to request.
- @param  payload       The object for the PUT body.
- @param  responseBlock The response handler.
+    Performs an asynchronous PUT request on the given URL.
+    @param url The URL to request.
+    @param payload The object for the PUT body.
+    @param responseBlock The response handler.
  */
-+ (void)put: (NSString *)url payload: (id)payload withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)put:(NSString *)url payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous POST request on the given URL.
- @param  url           The URL to request.
- @param  parameters    A dictionary of query string parameters.
- @param  payload       The object for the POST body.
- @param  responseBlock The response handler.
+    Performs an asynchronous POST request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @param payload The object for the POST body.
+    @param responseBlock The response handler.
  */
-+ (void)put: (NSString *)url parameters: (NSDictionary *)parameters payload: (id)payload withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)put:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /// @name Performing DELETE Requests
 
 /*!
- Performs a synchronous DELETE request on the given URL.
- @param  url           The URL to request.
- @param  responseBlock The response handler.
+    Performs an asynchronous DELETE request on the given URL.
+    @param url The URL to request.
+    @param responseBlock The response handler.
  */
-+ (void)delete: (NSString *)url withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)delete:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
- Performs a synchronous DELETE request on the given URL.
- @param  url           The URL to request.
- @param  parameters    A dictionary of query string parameters.
- @param  responseBlock The response handler.
+    Performs an asynchronous DELETE request on the given URL.
+    @param url The URL to request.
+    @param parameters A dictionary of query string parameters.
+    @param responseBlock The response handler.
  */
-+ (void)delete: (NSString *)url parameters: (NSDictionary *)parameters withBlock: (PCHTTPResponseBlock)responseBlock;
++ (void)delete:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 @end
