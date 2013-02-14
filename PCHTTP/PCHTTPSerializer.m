@@ -14,8 +14,12 @@
     NSMutableArray *dictionaryArray = [NSMutableArray array];
     for (NSString *keyElement in dictionary)
     {
+        id valueElement = [dictionary objectForKey: keyElement];
+        if (![valueElement isKindOfClass: [NSString class]])
+            continue;
+        
         NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-        NSString *value = [[NSString stringWithFormat: @"%@", [dictionary objectForKey: keyElement]] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+        NSString *value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
         [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
     }
     

@@ -8,6 +8,9 @@
 #import "PCHTTPClient.h"
 #import "PCHTTPSerializer.h"
 
+#pragma mark - Internal Constants
+NSString *const PCHTTPDefaultContentType = @"application/x-www-form-urlencoded";
+
 @interface PCHTTPClient ()
 
 + (void)asynchronouslyRequestURL:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
@@ -77,6 +80,7 @@
     }
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL: [NSURL URLWithString: urlString]];
+    [request setValue: PCHTTPDefaultContentType forHTTPHeaderField: @"Content-Type"];
     [request setHTTPMethod: method];
     [request setHTTPBody: requestBody];
     
