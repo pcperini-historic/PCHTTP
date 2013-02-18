@@ -15,7 +15,7 @@
     for (NSString *keyElement in dictionary)
     {
         id valueElement = [dictionary objectForKey: keyElement];
-        if (![valueElement isKindOfClass: [NSString class]])
+        if (![valueElement isKindOfClass: [NSString class]] && ![valueElement isKindOfClass: [NSNumber class]])
             continue;
         
         NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
