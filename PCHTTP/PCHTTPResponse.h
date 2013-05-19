@@ -80,6 +80,11 @@ typedef enum
  */
 @property NSString *requestURL;
 
+/*!
+    The body of the request for which this is the response.
+ */
+@property NSData *requestBody;
+
 #pragma mark - Response Information
 /// -------------------------------------
 /// @name Response Information

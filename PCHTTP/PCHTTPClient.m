@@ -89,6 +89,7 @@ NSString *const PCHTTPDefaultContentType = @"application/x-www-form-urlencoded";
                                                  returningResponse: &httpResponse
                                                              error: nil];
     [response setRequestURL: urlString];
+    [response setRequestBody: requestBody];
     [response setData: responseData];
     [response setStatus: [httpResponse statusCode]];
     return response;

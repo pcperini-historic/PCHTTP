@@ -11,6 +11,7 @@
 
 #pragma mark - Request Information
 @synthesize requestURL;
+@synthesize requestBody;
 
 #pragma mark - Response Information
 @synthesize status;
