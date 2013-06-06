@@ -12,9 +12,7 @@ On the plus side, there's no need to muck about with .a or .framework files or l
 
 ## Documentation ##
 
-- [PCHTTPClient](http://pcperini.com/github/PCHTTP/PCHTTPClient/)
-- [PCHTTPResponse](http://pcperini.com/github/PCHTTP/PCHTTPResponse/)
-- [PCHTTPSerializer](http://pcperini.com/github/PCHTTP/PCHTTPSerializer/)
+- [PCHTTP GitHub Page](http://pcperini.github.io/PCHTTP/PCHTTP_h/index.html)
 
 ## Oh, and... ##
 
