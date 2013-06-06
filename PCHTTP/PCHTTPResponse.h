@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class PCHTTPResponse;
 
 /*!
     Response codes that correspond to HTTP response codes.
@@ -66,6 +67,11 @@ typedef enum
 } PCHTTPResponseStatus;
 
 /*!
+    A block type with receives a single PCHTTPResponse object.
+ */
+typedef void(^PCHTTPResponseBlock)(PCHTTPResponse *response);
+
+/*!
     Represents a response for a single request.
  */
 @interface PCHTTPResponse : NSObject
@@ -111,5 +117,3 @@ typedef enum
 @property (readonly) id object;
 
 @end
-
-typedef void(^PCHTTPResponseBlock)(PCHTTPResponse *response);

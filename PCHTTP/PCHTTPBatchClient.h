@@ -10,6 +10,9 @@
 #import "PCHTTPResponse.h"
 
 #pragma mark - External Types
+/*!
+    A block type with receives an array of PCHTTPResponse objects.
+ */
 typedef void(^PCHTTPBatchResponseBlock)(NSArray *responses);
 
 /*!

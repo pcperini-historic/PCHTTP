@@ -17,9 +17,6 @@
 		73B6A653154F0A4F00C1DF00 /* PCHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A649154F0A4F00C1DF00 /* PCHTTPClient.m */; };
 		73B6A654154F0A4F00C1DF00 /* PCHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A64B154F0A4F00C1DF00 /* PCHTTPResponse.m */; };
 		73B6A655154F0A4F00C1DF00 /* PCHTTPSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A64D154F0A4F00C1DF00 /* PCHTTPSerializer.m */; };
-		73B6A65B154F0A6300C1DF00 /* app.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A657154F0A6300C1DF00 /* app.yaml */; };
-		73B6A65C154F0A6300C1DF00 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A658154F0A6300C1DF00 /* favicon.ico */; };
-		73B6A65D154F0A6300C1DF00 /* index.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A659154F0A6300C1DF00 /* index.yaml */; };
 		73B6A65E154F0A6300C1DF00 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A65A154F0A6300C1DF00 /* main.py */; };
 		73B6A669154F160400C1DF00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A668154F160400C1DF00 /* README.md */; };
 /* End PBXBuildFile section */
@@ -47,9 +44,6 @@
 		73B6A64B154F0A4F00C1DF00 /* PCHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHTTPResponse.m; sourceTree = "<group>"; };
 		73B6A64C154F0A4F00C1DF00 /* PCHTTPSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHTTPSerializer.h; sourceTree = "<group>"; };
 		73B6A64D154F0A4F00C1DF00 /* PCHTTPSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHTTPSerializer.m; sourceTree = "<group>"; };
-		73B6A657154F0A6300C1DF00 /* app.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.yaml; sourceTree = "<group>"; };
-		73B6A658154F0A6300C1DF00 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
-		73B6A659154F0A6300C1DF00 /* index.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.yaml; sourceTree = "<group>"; };
 		73B6A65A154F0A6300C1DF00 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
 		73B6A668154F160400C1DF00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,9 +142,6 @@
 		73B6A656154F0A6300C1DF00 /* pchttp-tests */ = {
 			isa = PBXGroup;
 			children = (
-				73B6A657154F0A6300C1DF00 /* app.yaml */,
-				73B6A658154F0A6300C1DF00 /* favicon.ico */,
-				73B6A659154F0A6300C1DF00 /* index.yaml */,
 				73B6A65A154F0A6300C1DF00 /* main.py */,
 			);
 			path = "pchttp-tests";
@@ -210,9 +201,6 @@
 				73B6A617154F0A2100C1DF00 /* InfoPlist.strings in Resources */,
 				73B6A61D154F0A2100C1DF00 /* Credits.rtf in Resources */,
 				73B6A623154F0A2200C1DF00 /* MainMenu.xib in Resources */,
-				73B6A65B154F0A6300C1DF00 /* app.yaml in Resources */,
-				73B6A65C154F0A6300C1DF00 /* favicon.ico in Resources */,
-				73B6A65D154F0A6300C1DF00 /* index.yaml in Resources */,
 				73B6A65E154F0A6300C1DF00 /* main.py in Resources */,
 				73B6A669154F160400C1DF00 /* README.md in Resources */,
 			);

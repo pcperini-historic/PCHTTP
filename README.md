@@ -18,7 +18,7 @@ On the plus side, there's no need to muck about with .a or .framework files or l
 
 ## Oh, and... ##
 
-PCHTTP is ARCed. A Google App Engine (GAE) test application (written in Python) is included in the test project. It is effectivly an echo server that can be run on local machines running GAE, or anyone's personal GAE account.
+PCHTTP is ARCed. A Flask test application (written in Python) is included in the test project. It is effectivly an echo server that can be run on local machines.
 
 ## License ##
 
