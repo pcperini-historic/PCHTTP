@@ -25,6 +25,7 @@
 
 - (id)object
 {
+    if (!data) return nil;
     return [NSJSONSerialization JSONObjectWithData: data
                                            options: 0
                                              error: nil];
