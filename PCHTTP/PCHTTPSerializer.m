@@ -15,12 +15,31 @@
     for (NSString *keyElement in dictionary)
     {
         id valueElement = [dictionary objectForKey: keyElement];
-        if (![valueElement isKindOfClass: [NSString class]] && ![valueElement isKindOfClass: [NSNumber class]])
+
+        BOOL validClass = NO;
+        validClass |= [valueElement isKindOfClass: [NSString class]];
+        validClass |= [valueElement isKindOfClass: [NSNumber class]];
+        validClass |= [valueElement isKindOfClass: [NSArray class]];
+        
+        if (!validClass)
             continue;
         
-        NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-        NSString *value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-        [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
+        if ([valueElement conformsToProtocol: @protocol(NSFastEnumeration)])
+        {
+            id values = [valueElement copy];
+            for (id valueObject in values)
+            {
+                NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+                NSString *value = [[NSString stringWithFormat: @"%@", valueObject] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+                [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
+            }
+        }
+        else
+        {
+            NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+            NSString *value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+            [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
+        }
     }
     
     NSString *dictionaryString = [dictionaryArray componentsJoinedByString: @"&"];
