@@ -15,8 +15,6 @@
     for (NSString *keyElement in dictionary)
     {
         id valueElement = [dictionary objectForKey: keyElement];
-        if (![valueElement isKindOfClass: [NSString class]] && ![valueElement isKindOfClass: [NSNumber class]] && ![valueElement isKindOfClass: [NSArray class]])
-            continue;
 
         BOOL validClass = NO;
         validClass |= [valueElement isKindOfClass: [NSString class]];
@@ -26,32 +24,19 @@
         if (!validClass)
             continue;
         
-        if ([valueElement conformsToProtocol: @protocol(NSFastEnumeration)])
+        NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+        NSString *value;
+        
+        if ([valueElement isKindOfClass: [NSString class]] || [valueElement isKindOfClass: [NSNumber class]])
         {
-            id values = [valueElement copy];
-            for (id valueObject in values)
-            {
-                NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-                NSString *value;
-                
-                if ([valueElement isKindOfClass: [NSString class]] || [valueElement isKindOfClass: [NSNumber class]])
-                {
-                    value = [[NSString stringWithFormat: @"%@", valueObject] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-                }
-                else if ([valueElement isKindOfClass: [NSArray class]])
-                {
-                    value = [valueElement componentsJoinedByString: @","];
-                }
-                
-                [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
-            }
+            value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
         }
-        else
+        else if ([valueElement isKindOfClass: [NSArray class]])
         {
-            NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-            NSString *value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-            [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
+            value = [valueElement componentsJoinedByString: @","];
         }
+        
+        [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
     }
     
     NSString *dictionaryString = [dictionaryArray componentsJoinedByString: @"&"];
