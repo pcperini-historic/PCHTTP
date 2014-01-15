@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16534982-C7C7-43EF-B1FF-201831524AF8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PCHTTPTests</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>52A577E6-FC03-4F40-B7C1-EE21AB58F849</key>
+		<string>https://github.com/pcperini/PCHTTP.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PCHTTPTests/PCHTTPTests.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>52A577E6-FC03-4F40-B7C1-EE21AB58F849</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pcperini/PCHTTP.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>52A577E6-FC03-4F40-B7C1-EE21AB58F849</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>52A577E6-FC03-4F40-B7C1-EE21AB58F849</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PCHTTP</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -15,6 +15,8 @@
     for (NSString *keyElement in dictionary)
     {
         id valueElement = [dictionary objectForKey: keyElement];
+        if (![valueElement isKindOfClass: [NSString class]] && ![valueElement isKindOfClass: [NSNumber class]] && ![valueElement isKindOfClass: [NSArray class]])
+            continue;
 
         BOOL validClass = NO;
         validClass |= [valueElement isKindOfClass: [NSString class]];
@@ -30,7 +32,17 @@
             for (id valueObject in values)
             {
                 NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-                NSString *value = [[NSString stringWithFormat: @"%@", valueObject] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+                NSString *value;
+                
+                if ([valueElement isKindOfClass: [NSString class]] || [valueElement isKindOfClass: [NSNumber class]])
+                {
+                    value = [[NSString stringWithFormat: @"%@", valueObject] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+                }
+                else if ([valueElement isKindOfClass: [NSArray class]])
+                {
+                    value = [valueElement componentsJoinedByString: @","];
+                }
+                
                 [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
             }
         }
