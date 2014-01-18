@@ -20,6 +20,7 @@
         validClass |= [valueElement isKindOfClass: [NSString class]];
         validClass |= [valueElement isKindOfClass: [NSNumber class]];
         validClass |= [valueElement isKindOfClass: [NSArray class]];
+        validClass |= [valueElement isKindOfClass: [NSDate class]];
         
         if (!validClass)
             continue;
@@ -30,6 +31,10 @@
         if ([valueElement isKindOfClass: [NSString class]] || [valueElement isKindOfClass: [NSNumber class]])
         {
             value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+        }
+        else if ([valueElement isKindOfClass: [NSDate class]])
+        {
+            value = [NSString stringWithFormat: @"%f", [valueElement timeIntervalSince1970]];
         }
         else if ([valueElement isKindOfClass: [NSArray class]])
         {
