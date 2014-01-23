@@ -9,7 +9,7 @@
 #import "PCHTTPSerializer.h"
 
 #pragma mark - Internal Constants
-NSString *const PCHTTPDefaultContentType = @"application/x-www-form-urlencoded";
+NSString *const PCHTTPDefaultContentType = @"application/json";
 
 @interface PCHTTPClient ()
 
@@ -70,8 +70,9 @@ NSString *const PCHTTPDefaultContentType = @"application/x-www-form-urlencoded";
         }
         else if ([payload isKindOfClass: [NSDictionary class]])
         {
-            NSString *payloadString = [PCHTTPSerializer keyValueEvaluateDictionary: payload];
-            requestBody = [payloadString dataUsingEncoding: NSUTF8StringEncoding];
+            requestBody = [NSJSONSerialization dataWithJSONObject: payload
+                                                          options: 0
+                                                            error: nil];
         }
         else if (payload)
         {

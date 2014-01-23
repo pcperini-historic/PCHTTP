@@ -108,7 +108,7 @@ void logResponse(NSString *header, PCHTTPResponse *response)
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSLog(@"%@", [NSNull null]);
+    NSLog(@"%@", [NSJSONSerialization JSONObjectWithData: [@""] options:<#(NSJSONReadingOptions)#> error:<#(NSError *__autoreleasing *)#>]);
     
     //[self testClient];
     [self testBatchClient];
