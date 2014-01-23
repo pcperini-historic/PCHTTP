@@ -108,6 +108,8 @@ void logResponse(NSString *header, PCHTTPResponse *response)
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    NSLog(@"%@", [NSNull null]);
+    
     //[self testClient];
     [self testBatchClient];
 }

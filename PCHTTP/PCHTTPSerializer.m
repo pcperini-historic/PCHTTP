@@ -21,6 +21,7 @@
         validClass |= [valueElement isKindOfClass: [NSNumber class]];
         validClass |= [valueElement isKindOfClass: [NSArray class]];
         validClass |= [valueElement isKindOfClass: [NSDate class]];
+        validClass |= [valueElement isKindOfClass: [NSNull class]];
         
         if (!validClass)
             continue;
@@ -28,7 +29,7 @@
         NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
         NSString *value;
         
-        if ([valueElement isKindOfClass: [NSString class]] || [valueElement isKindOfClass: [NSNumber class]])
+        if ([valueElement isKindOfClass: [NSString class]] || [valueElement isKindOfClass: [NSNumber class]] || [valueElement isKindOfClass: [NSNull class]])
         {
             value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
         }
