@@ -52,7 +52,7 @@
 + (NSString *)jsonEvaluateDictionary:(NSDictionary *)dictionary
 {
     NSMutableDictionary *mutableDictionary = [dictionary mutableCopy];
-    for (NSString *key in mutableDictionary)
+    for (NSString *key in dictionary)
     {
         id value = [mutableDictionary valueForKey: key];
         
