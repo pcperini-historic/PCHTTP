@@ -49,4 +49,25 @@
     return dictionaryString;
 }
 
++ (NSString *)jsonEvaluateDictionary:(NSDictionary *)dictionary
+{
+    NSMutableDictionary *mutableDictionary = [dictionary mutableCopy];
+    for (NSString *key in mutableDictionary)
+    {
+        id value = [mutableDictionary valueForKey: key];
+        
+        // Coerce values
+        if ([value isKindOfClass: [NSDate class]])
+        {
+            [mutableDictionary setValue: @([value timeIntervalSince1970])
+                                 forKey: key];
+        }
+    }
+    
+    return [[NSString alloc] initWithData: [NSJSONSerialization dataWithJSONObject: mutableDictionary
+                                                                           options: 0
+                                                                             error: nil]
+                                 encoding: NSUTF8StringEncoding];
+}
+
 @end

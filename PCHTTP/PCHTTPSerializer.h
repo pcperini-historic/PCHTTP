@@ -33,4 +33,9 @@
  */
 + (NSString *)keyValueEvaluateDictionary:(NSDictionary *)dictionary;
 
+/*!
+    DOCME
+ */
++ (NSString *)jsonEvaluateDictionary:(NSDictionary *)dictionary;
+
 @end
