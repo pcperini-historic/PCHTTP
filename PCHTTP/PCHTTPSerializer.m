@@ -22,13 +22,13 @@
         validClass |= [valueElement isKindOfClass: [NSArray class]];
         validClass |= [valueElement isKindOfClass: [NSDate class]];
         validClass |= [valueElement isKindOfClass: [NSNull class]];
-        
+
         if (!validClass)
             continue;
-        
+
         NSString *key = [[NSString stringWithFormat: @"%@", keyElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
         NSString *value;
-        
+
         if ([valueElement isKindOfClass: [NSString class]] || [valueElement isKindOfClass: [NSNumber class]] || [valueElement isKindOfClass: [NSNull class]])
         {
             value = [[NSString stringWithFormat: @"%@", valueElement] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
@@ -41,10 +41,10 @@
         {
             value = [valueElement componentsJoinedByString: @","];
         }
-        
+
         [dictionaryArray addObject: [NSString stringWithFormat: @"%@=%@", key, value]];
     }
-    
+
     NSString *dictionaryString = [dictionaryArray componentsJoinedByString: @"&"];
     return dictionaryString;
 }
@@ -55,7 +55,7 @@
     for (NSString *key in dictionary)
     {
         id value = [mutableDictionary valueForKey: key];
-        
+
         // Coerce values
         if ([value isKindOfClass: [NSDate class]])
         {
@@ -63,7 +63,7 @@
                                  forKey: key];
         }
     }
-    
+
     return [[NSString alloc] initWithData: [NSJSONSerialization dataWithJSONObject: mutableDictionary
                                                                            options: 0
                                                                              error: nil]
