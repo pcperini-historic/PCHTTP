@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.source       = {
       :git => "https://github.com/pcperini/PCHTTP.git",
-      :tag => "v1.0.0"
+      :tag => "v1.0.1"
   }
 
   s.source_files  = 'PCHTTP/*.{h,m}'
