@@ -138,6 +138,13 @@
 /*!
     Performs an asynchronous GET request on the given URL.
     @param url The URL to request.
+    @param responseBlock The response handler.
+ */
++ (void)get:(NSString *)url headers:(NSDictionary *)headers responseHandler:(PCHTTPResponseBlock)responseBlock;
+
+/*!
+    Performs an asynchronous GET request on the given URL.
+    @param url The URL to request.
     @param parameters A dictionary of query string parameters.
     @param responseBlock The response handler.
  */
@@ -151,6 +158,13 @@
     @param responseBlock The response handler.
  */
 + (void)post:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock;
+
+/*!
+    Performs an asynchronous POST request on the given URL.
+    @param url The URL to request.
+    @param responseBlock The response handler.
+ */
++ (void)post:(NSString *)url headers:(NSDictionary *)headers responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
     Performs an asynchronous POST request on the given URL.
@@ -203,6 +217,14 @@
 + (void)put:(NSString *)url payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
+    Performs an asynchronous PUT request on the given URL.
+    @param url The URL to request.
+    @param payload The object for the PUT body.
+    @param responseBlock The response handler.
+ */
++ (void)put:(NSString *)url payload:(id)payload headers:(NSDictionary *)headers responseHandler:(PCHTTPResponseBlock)responseBlock;
+
+/*!
     Performs an asynchronous POST request on the given URL.
     @param url The URL to request.
     @param parameters A dictionary of query string parameters.
@@ -219,6 +241,13 @@
     @param responseBlock The response handler.
  */
 + (void)delete:(NSString *)url responseHandler:(PCHTTPResponseBlock)responseBlock;
+
+/*!
+    Performs an asynchronous DELETE request on the given URL.
+    @param url The URL to request.
+    @param responseBlock The response handler.
+ */
++ (void)delete:(NSString *)url headers:(NSDictionary *)headers responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 /*!
     Performs an asynchronous DELETE request on the given URL.
