@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PCHTTP"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "PCHTTP - A Simple Cocoa HTTP Client"
 
   s.homepage     = "https://github.com/pcperini/PCHTTP"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.source       = {
       :git => "https://github.com/pcperini/PCHTTP.git",
-      :tag => "v1.0.1"
+      :tag => "v1.0.2"
   }
 
   s.source_files  = 'PCHTTP/*.{h,m}'

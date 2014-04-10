@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73043BE818F6B69D006D4349 /* PCHTTP.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 73043BE718F6B69D006D4349 /* PCHTTP.podspec */; };
 		7385A67116CBE0A0006597A3 /* PCHTTPBatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7385A67016CBE0A0006597A3 /* PCHTTPBatchClient.m */; };
 		73B6A60D154F0A2100C1DF00 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B6A60C154F0A2100C1DF00 /* Cocoa.framework */; };
 		73B6A617154F0A2100C1DF00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73B6A615154F0A2100C1DF00 /* InfoPlist.strings */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73043BE718F6B69D006D4349 /* PCHTTP.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PCHTTP.podspec; path = ../PCHTTP.podspec; sourceTree = "<group>"; };
 		7385A66F16CBE0A0006597A3 /* PCHTTPBatchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHTTPBatchClient.h; sourceTree = "<group>"; };
 		7385A67016CBE0A0006597A3 /* PCHTTPBatchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHTTPBatchClient.m; sourceTree = "<group>"; };
 		73B6A608154F0A2100C1DF00 /* PCHTTPTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCHTTPTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 		73B6A5FD154F0A2100C1DF00 = {
 			isa = PBXGroup;
 			children = (
+				73043BE718F6B69D006D4349 /* PCHTTP.podspec */,
 				73B6A668154F160400C1DF00 /* README.md */,
 				73B6A612154F0A2100C1DF00 /* PCHTTPTests */,
 				73B6A60B154F0A2100C1DF00 /* Frameworks */,
@@ -203,6 +206,7 @@
 				73B6A623154F0A2200C1DF00 /* MainMenu.xib in Resources */,
 				73B6A65E154F0A6300C1DF00 /* main.py in Resources */,
 				73B6A669154F160400C1DF00 /* README.md in Resources */,
+				73043BE818F6B69D006D4349 /* PCHTTP.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

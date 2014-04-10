@@ -235,6 +235,16 @@ NSString *const PCHTTPDefaultContentType = @"application/json";
                            responseHandler: responseBlock];
 }
 
++ (void)get:(NSString *)url parameters:(NSDictionary *)parameters headers:(NSDictionary *)headers responseHandler:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"GET"
+                                parameters: parameters
+                                   payload: nil
+                                   headers: headers
+                           responseHandler: responseBlock];
+}
+
 + (void)get:(NSString *)url headers:(NSDictionary *)headers responseHandler:(PCHTTPResponseBlock)responseBlock
 {
     [PCHTTPClient asynchronouslyRequestURL: url
