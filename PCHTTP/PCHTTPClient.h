@@ -36,6 +36,13 @@
  */
 + (PCHTTPResponse *)get:(NSString *)url parameters:(NSDictionary *)parameters;
 
+/*!
+ Performs a synchronous GET request on the given URL.
+ @param url The URL to request.
+ @param parameters A dictionary of query string parameters.
+ @return The response for the request.
+ */
++ (PCHTTPResponse *)get:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters;
 /// @name Performing POST Requests
 
 /*!
@@ -70,6 +77,7 @@
  */
 + (PCHTTPResponse *)post:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload;
 
++ (PCHTTPResponse *)post:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload;
 /// @name Performing PUT Requests
 
 /*!
@@ -104,6 +112,8 @@
  */
 + (PCHTTPResponse *)put:(NSString *)url parameters:(NSDictionary *)parameters payload:(id)payload;
 
++ (PCHTTPResponse *)put:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload;
+
 /// @name Performing DELETE Requests
 
 /*!
@@ -120,6 +130,8 @@
  @return The response for the request.
  */
 + (PCHTTPResponse *)delete:(NSString *)url parameters:(NSDictionary *)parameters;
+
++ (PCHTTPResponse *)delete:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload;
 
 #pragma mark - Asynchronous Methods
 /// -------------------------------------
@@ -263,6 +275,11 @@
  @param parameters A dictionary of query string parameters.
  @param responseBlock The response handler.
  */
+
++ (void)delete:(NSString *)url headers:(NSDictionary *)headers responseHandler:(PCHTTPResponseBlock)responseBlock;
+
 + (void)delete:(NSString *)url parameters:(NSDictionary *)parameters responseHandler:(PCHTTPResponseBlock)responseBlock;
+
++ (void)delete:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock;
 
 @end

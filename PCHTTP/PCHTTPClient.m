@@ -120,6 +120,15 @@ NSString *const PCHTTPDefaultContentType = @"application/json";
                                          headers: nil];
 }
 
++ (PCHTTPResponse *)get:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"GET"
+                                      parameters: parameters
+                                         payload: nil
+                                         headers: headers];
+}
+
 #pragma mark - - POST
 + (PCHTTPResponse *)post:(NSString *)url
 {
@@ -155,6 +164,15 @@ NSString *const PCHTTPDefaultContentType = @"application/json";
                                       parameters: parameters
                                          payload: payload
                                          headers: nil];
+}
+
++ (PCHTTPResponse *)post:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"POST"
+                                      parameters: parameters
+                                         payload: payload
+                                         headers: headers];
 }
 
 #pragma mark - - PUT
@@ -194,6 +212,15 @@ NSString *const PCHTTPDefaultContentType = @"application/json";
                                          headers: nil];
 }
 
++ (PCHTTPResponse *)put:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"PUT"
+                                      parameters: parameters
+                                         payload: payload
+                                         headers: headers];
+}
+
 #pragma mark - - DELETE
 + (PCHTTPResponse *)delete:(NSString *)url
 {
@@ -211,6 +238,15 @@ NSString *const PCHTTPDefaultContentType = @"application/json";
                                       parameters: parameters
                                          payload: nil
                                          headers: nil];
+}
+
++ (PCHTTPResponse *)delete:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload
+{
+    return [PCHTTPClient synchronouslyRequestURL: url
+                                          method: @"DELETE"
+                                      parameters: parameters
+                                         payload: payload
+                                         headers: headers];
 }
 
 #pragma mark - Asynchronous Methods
@@ -385,6 +421,16 @@ NSString *const PCHTTPDefaultContentType = @"application/json";
                                 parameters: parameters
                                    payload: nil
                                    headers: nil
+                           responseHandler: responseBlock];
+}
+
++ (void)delete:(NSString *)url headers:(NSDictionary *)headers parameters:(NSDictionary *)parameters payload:(id)payload responseHandler:(PCHTTPResponseBlock)responseBlock
+{
+    [PCHTTPClient asynchronouslyRequestURL: url
+                                    method: @"DELETE"
+                                parameters: parameters
+                                   payload: payload
+                                   headers: headers
                            responseHandler: responseBlock];
 }
 
